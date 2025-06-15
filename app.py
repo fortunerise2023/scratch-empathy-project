@@ -11,8 +11,10 @@ with col1:
 with col2:
     st.title("Scratch Empathy Project")
     st.subheader("Inclusive Coding Education for Neurodiverse Learners")
-    st.markdown("> *'Coding is a language — every brain deserves a voice.'*  
- — **Yixuan Li**, Project Creator")
+    st.markdown("""
+> *Coding is a language — every brain deserves a voice.*  
+— **Yixuan Li**
+""")
 
 st.divider()
 
