@@ -42,8 +42,7 @@ modules = [
 ]
 for i, (title, desc) in enumerate(modules):
     with cols[i]:
-        content = "**" + title + "**  
-<sub>" + desc + "</sub>"
+        content = f"<b>{title}</b><br><sub>{desc}</sub>"
         st.markdown(content, unsafe_allow_html=True)
 
 st.divider()
