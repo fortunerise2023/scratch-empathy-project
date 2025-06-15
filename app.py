@@ -42,8 +42,9 @@ modules = [
 ]
 for i, (title, desc) in enumerate(modules):
     with cols[i]:
-        st.markdown(f"**{title}**  
-<sub>{desc}</sub>", unsafe_allow_html=True)
+        content = "**" + title + "**  
+<sub>" + desc + "</sub>"
+        st.markdown(content, unsafe_allow_html=True)
 
 st.divider()
 
@@ -72,8 +73,11 @@ st.video("https://www.youtube.com/embed/YOUR_VIDEO_ID")
 # --- PDF download ---
 st.divider()
 st.header("📎 Download Project Summary")
-with open("data/scratch_summary.pdf", "rb") as f:
-    st.download_button("📄 Download PDF", f, file_name="ScratchEmpathy_YixuanLi.pdf")
+try:
+    with open("data/scratch_summary.pdf", "rb") as f:
+        st.download_button("📄 Download PDF", f, file_name="ScratchEmpathy_YixuanLi.pdf")
+except:
+    st.warning("📎 scratch_summary.pdf not found in /data folder.")
 
 # --- About the Creator ---
 st.divider()
